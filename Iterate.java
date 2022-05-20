@@ -14,19 +14,20 @@ public class Iterate {
 		for(int i = 0; i < 7;i++) {	
 			a.add(sc.nextInt());
 		}
-		
-		int count =0;
-		for(int i =0;i<a.size()-1;i++) {
-			if(a.get(i)>a.get(i+1)){
-			b.add(a.get(i));
-			a.remove(a.get(i));
+
+		int count =0;		
+		for(int i= 0 ; i<a.size()-1;i++) {
+
+			if(a.get(i) > a.get(i+1)) {
+				b.add(a.get(i));
+				a.remove(a.get(i));
 			}
 			else {
-				b.add(a.get(i));
 				a.remove(a.get(i+1));
-				
+				b.add(a.get(i));
 			}
-			System.out.println("ArrayList: " + b);
+			count++;			
 		}
+		System.out.println(count-1);
 	}
 }
